@@ -34,3 +34,27 @@ Constraints:
 
 -231 <= x <= 231 - 1
 '''
+
+def reverse(x):
+    result = ""
+    absnum = abs(x)
+    strnum = str(absnum)
+    lennum = len(strnum)
+    print(strnum)
+
+    if absnum > 0:
+        for i in range (lennum-1,-1,-1):
+            result = result + strnum[i]
+    else:
+        result = str(0)
+
+    if x < 0:
+        result = str(int(result) * -1)
+
+    return(int(result))
+
+
+
+if __name__ == "__main__":
+    num = -123
+    print(reverse(num))
