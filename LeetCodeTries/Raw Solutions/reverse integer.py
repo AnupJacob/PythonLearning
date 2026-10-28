@@ -42,19 +42,29 @@ def reverse(x):
     lennum = len(strnum)
     print(strnum)
 
-    if absnum > 0:
-        for i in range (lennum-1,-1,-1):
-            result = result + strnum[i]
+    print(2**31 - 1)
+
+    if x > (2**31 - 1) or x < (-2**31):
+        print("here")
+        return 0
     else:
-        result = str(0)
+        if absnum > 0:
+            for i in range (lennum-1,-1,-1):
+                result = result + strnum[i]
+        else:
+            result = str(0)
 
-    if x < 0:
-        result = str(int(result) * -1)
+        if x < 0:
+            result = str(int(result) * -1)
 
-    return(int(result))
+    if int(result) > (2**31 - 1) or int(result) < (-2**31):
+        print("here")
+        return 0
+    else:
+        return(int(result))
 
 
 
 if __name__ == "__main__":
-    num = -123
+    num = 1534236469
     print(reverse(num))
