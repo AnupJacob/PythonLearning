@@ -3,9 +3,9 @@
 # File          : Two Sum.py
 # Author        : Anup Jacob
 # Version       : v1.0
-# Created Date  : 28/04/2022
-# Modified Date :
-# Description   : Average of list of numbers
+# Created Date  : 27/10/2026
+# Modified Date : 28/10/2026
+# Description   : Finding indices of sum of two numbers resulting in a target
 # Licensing     : AnupJake
 # ----------------------------------
 
