@@ -38,3 +38,32 @@ Constraints:
 
 Follow up: Could you solve it without converting the integer to a string?
 '''
+
+def isPalindrome(x):
+    checkx = x
+    numx = 0
+
+    if checkx <= 0:
+        return False
+    elif checkx == 0:
+        return True
+    else:
+        while x != 0:
+            modx = x%10
+            numx = numx*10 + modx
+            x = x//10
+            print(modx)
+
+        print(numx)
+        if numx == checkx:
+            result = True
+        else:
+            result = False
+
+    return result
+
+
+if __name__ == '__main__':
+
+    num = 1221
+    print(isPalindrome(num))
