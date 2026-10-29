@@ -54,5 +54,6 @@ def isPalindrome(x):
 
 if __name__ == '__main__':
 
-    num = 1221
+    #num = 1221
+    num = -1221
     print(isPalindrome(num))
