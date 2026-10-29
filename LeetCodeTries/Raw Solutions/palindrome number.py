@@ -43,7 +43,7 @@ def isPalindrome(x):
     checkx = x
     numx = 0
 
-    if checkx <= 0:
+    if checkx < 0:
         return False
     elif checkx == 0:
         return True
