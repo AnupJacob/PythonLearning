@@ -42,3 +42,17 @@ n == nums.length
 1 <= nums[i] <= 1000
 
 '''
+
+def getConcatenation(nums):
+    concatnum = []
+
+    for i in range (0,len(nums)):
+        concatnum.append(nums[i])
+
+    result = concatnum * 2
+
+    return result
+
+if __name__ == '__main__':
+    numbers = [1,2,1]
+    print(getConcatenation(numbers))
