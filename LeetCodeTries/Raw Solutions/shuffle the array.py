@@ -37,3 +37,19 @@ Constraints:
 nums.length == 2n
 1 <= nums[i] <= 10^3
 '''
+
+def shuffle(nums, n):
+
+    result = []
+
+    for i in range(n):
+        result.append(nums[i])
+        result.append(nums[i+n])
+
+    return result
+
+if __name__ == '__main__':
+#    nums, n = [2, 5, 1, 3, 4, 7], 3
+    nums, n = [1, 2, 3, 4, 4, 3, 2, 1], 4
+
+    print(shuffle(nums, n))
