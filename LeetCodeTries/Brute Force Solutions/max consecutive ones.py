@@ -44,6 +44,7 @@ def findMaxConsecutiveOnes(nums):
             maxone = count
             count = 0
 
+    print("numslen : "+str(numslen))
     print("maxone : "+str(maxone))
     print("count : "+str(count))
 
