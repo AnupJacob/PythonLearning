@@ -38,10 +38,20 @@ Constraints:
 
 class Solution:
     def findErrorNums(nums):
-        result = []
-        return result
+        lennums =len(nums)
+        sumnums = sum(nums)
+        totallensums = lennums * (lennums + 1) // 2
+
+        sumsetnums = sum(set(nums))  #changing to a set removes the duplicate, which when subtracted gives solution
+        duplicate = sumnums - sumsetnums
+        missing = totallensums - sumsetnums
+
+        print("missing =", missing)
+        print("duplicate =",duplicate)
+
+        return [duplicate,missing]
 
 
     if __name__ == "__main__":
         nums = [1,2,2,4]
-        findErrorNums(nums)
+        print(findErrorNums(nums))
