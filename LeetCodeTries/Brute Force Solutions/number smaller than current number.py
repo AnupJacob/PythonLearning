@@ -44,8 +44,19 @@ Constraints:
 '''
 
 def smallerNumbersThanCurrent(nums):
+    lennums = len(nums)
+    result = []
+    for i in range(0,lennums):
+        count = 0
+        numcheck = nums[i]
 
-    return nums
+        for j in range(0,lennums):
+            if numcheck > nums[j] and i != j:
+                count += 1
+
+        result.append(count)
+
+    return result
 
 if __name__ == "__main__":
     nums = [6, 5, 4, 8]
