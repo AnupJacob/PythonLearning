@@ -42,3 +42,11 @@ Constraints:
 0 <= nums[i] <= 100
 
 '''
+
+def smallerNumbersThanCurrent(nums):
+
+    return nums
+
+if __name__ == "__main__":
+    nums = [6, 5, 4, 8]
+    print("The result is : ",smallerNumbersThanCurrent(nums))
