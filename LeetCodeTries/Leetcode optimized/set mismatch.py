@@ -34,11 +34,33 @@ Constraints:
 1 <= nums[i] <= 104
 
 
-'''
-
+brute force test
 def findErrorNums(nums):
-    return nums
+    dummy = []
+    result = []
+    lennums = len(nums)
+    setnums = set(nums)
+
+    for i in range(0, lennums):
+        if nums[i] in dummy:
+            result.append(nums[i])
+        dummy.append(nums[i])
+
+    for i in range(1,lennums+1):
+        if i not in setnums:
+            result.append(i)
+
+    return result
+'''
+def findErrorNums(nums):
+    lennums = len(nums)
+    sumnums =sum(nums)
+    setnums = set(nums)
+    sumsetnums = sum(setnums)
+    actualsum = lennums * (lennums + 1) // 2
+
+    return (sumnums-sumsetnums, actualsum-sumsetnums)
 
 if __name__ == "__main__":
     nums = [1, 2, 2, 4]
-    print(findErrorNums(nums))
+    print("The result is :",findErrorNums(nums))
